@@ -1,0 +1,16 @@
+{
+  "required": true,
+  "package": "ghana7.extracoals.mixin",
+  "compatibilityLevel": "JAVA_8",
+  "refmap": "extracoals.refmap.json",
+  "mixins": [
+    "MixinAbstractFurnaceTileEntity"
+  ],
+  "client": [
+    "ExampleMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  },
+  "minVersion": "0.8"
+}
