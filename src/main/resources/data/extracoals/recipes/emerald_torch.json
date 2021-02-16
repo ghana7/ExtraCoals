@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern":
+  [
+    "c",
+    "s"
+  ],
+  "key":
+  {
+    "c":
+    {
+      "item": "extracoals:emerald_coal"
+    },
+    "s":
+    {
+      "item": "minecraft:stick"
+    }
+  },
+  "result":
+  {
+    "item": "extracoals:emerald_torch",
+    "count": 4
+  }
+}

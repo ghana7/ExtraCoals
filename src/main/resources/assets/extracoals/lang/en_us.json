@@ -4,5 +4,11 @@
   "item.extracoals.gold_coal": "Gold Coal",
   "item.extracoals.iron_coal": "Iron Coal",
   "item.extracoals.lapis_coal": "Lapis Coal",
-  "item.extracoals.redstone_coal": "Redstone Coal"
+  "item.extracoals.redstone_coal": "Redstone Coal",
+
+  "block.extracoals.diamond_torch": "Diamond Torch",
+  "block.extracoals.emerald_torch": "Emerald Torch",
+  "block.extracoals.gold_torch": "Gold Torch",
+  "block.extracoals.lapis_torch": "Lapis Torch",
+  "block.extracoals.iron_torch": "Iron Torch"
 }

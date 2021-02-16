@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern":
+  [
+    "c",
+    "s"
+  ],
+  "key":
+  {
+    "c":
+    {
+      "item": "extracoals:lapis_coal"
+    },
+    "s":
+    {
+      "item": "minecraft:stick"
+    }
+  },
+  "result":
+  {
+    "item": "extracoals:lapis_torch",
+    "count": 4
+  }
+}
