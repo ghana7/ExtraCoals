@@ -72,19 +72,19 @@ public abstract class MixinAbstractFurnaceTileEntity extends LockableTileEntity 
 
         int speedIncrease = 1;
         if(!this.world.isRemote && lastFuelUsed != null) {
-            if(lastFuelUsed == ExtraCoals.GOLD_COAL.get()) {
+            if(lastFuelUsed == ExtraCoals.GOLD_COAL.get() || lastFuelUsed == ExtraCoals.GOLD_COAL_BLOCK_BI.get()) {
                 speedIncrease = 8;
             }
-            if(lastFuelUsed == ExtraCoals.REDSTONE_COAL.get()) {
+            if(lastFuelUsed == ExtraCoals.REDSTONE_COAL.get() || lastFuelUsed == ExtraCoals.REDSTONE_COAL_BLOCK_BI.get()) {
                 speedIncrease = 4;
             }
-            if(lastFuelUsed == ExtraCoals.DIAMOND_COAL.get()) {
+            if(lastFuelUsed == ExtraCoals.DIAMOND_COAL.get() || lastFuelUsed == ExtraCoals.DIAMOND_COAL_BLOCK_BI.get()) {
                 speedIncrease = 4;
             }
-            if(lastFuelUsed == ExtraCoals.EMERALD_COAL.get()) {
+            if(lastFuelUsed == ExtraCoals.EMERALD_COAL.get() || lastFuelUsed == ExtraCoals.EMERALD_COAL_BLOCK_BI.get()) {
                 speedIncrease = 2;
             }
-            if(lastFuelUsed == ExtraCoals.LAPIS_COAL.get()) {
+            if(lastFuelUsed == ExtraCoals.LAPIS_COAL.get() || lastFuelUsed == ExtraCoals.LAPIS_COAL_BLOCK_BI.get()) {
                 speedIncrease = 2;
             }
         }

@@ -6,6 +6,13 @@
   "item.extracoals.lapis_coal": "Lapis Coal",
   "item.extracoals.redstone_coal": "Redstone Coal",
 
+  "block.extracoals.diamond_coal_block": "Diamond Coal Block",
+  "block.extracoals.emerald_coal_block": "Emerald Coal Block",
+  "block.extracoals.gold_coal_block": "Gold Coal Block",
+  "block.extracoals.iron_coal_block": "Iron Coal Block",
+  "block.extracoals.lapis_coal_block": "Lapis Coal Block",
+  "block.extracoals.redstone_coal_block": "Redstone Coal Block",
+
   "block.extracoals.diamond_torch": "Diamond Torch",
   "block.extracoals.emerald_torch": "Emerald Torch",
   "block.extracoals.gold_torch": "Gold Torch",

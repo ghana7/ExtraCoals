@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "###",
+    "###",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "extracoals:gold_coal"
+    }
+  },
+  "result": {
+    "item": "extracoals:gold_coal_block"
+  }
+}

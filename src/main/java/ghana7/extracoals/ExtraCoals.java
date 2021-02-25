@@ -1,13 +1,14 @@
 package ghana7.extracoals;
 
 import ghana7.extracoals.torches.*;
+import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
+import net.minecraft.block.Blocks;
+import net.minecraft.block.material.Material;
+import net.minecraft.block.material.MaterialColor;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.RenderTypeLookup;
-import net.minecraft.item.Item;
-import net.minecraft.item.ItemGroup;
-import net.minecraft.item.ItemStack;
-import net.minecraft.item.WallOrFloorItem;
+import net.minecraft.item.*;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.furnace.FurnaceFuelBurnTimeEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
@@ -67,6 +68,30 @@ public class ExtraCoals
             new Item(new Item.Properties()
                     .group(ItemGroup.MATERIALS)
                     .maxStackSize(64))
+    );
+
+    public static final RegistryObject<Block> DIAMOND_COAL_BLOCK = BLOCKS.register("diamond_coal_block", () ->
+            new Block(AbstractBlock.Properties.create(Material.ROCK, MaterialColor.DIAMOND).setRequiresTool().hardnessAndResistance(5.0F, 6.0F))
+    );
+
+    public static final RegistryObject<Block> EMERALD_COAL_BLOCK = BLOCKS.register("emerald_coal_block", () ->
+            new Block(AbstractBlock.Properties.create(Material.ROCK, MaterialColor.EMERALD).setRequiresTool().hardnessAndResistance(5.0F, 6.0F))
+    );
+
+    public static final RegistryObject<Block> GOLD_COAL_BLOCK = BLOCKS.register("gold_coal_block", () ->
+            new Block(AbstractBlock.Properties.create(Material.ROCK, MaterialColor.GOLD).setRequiresTool().hardnessAndResistance(5.0F, 6.0F))
+    );
+
+    public static final RegistryObject<Block> IRON_COAL_BLOCK = BLOCKS.register("iron_coal_block", () ->
+            new Block(AbstractBlock.Properties.create(Material.ROCK, MaterialColor.IRON).setRequiresTool().hardnessAndResistance(5.0F, 6.0F))
+    );
+
+    public static final RegistryObject<Block> LAPIS_COAL_BLOCK = BLOCKS.register("lapis_coal_block", () ->
+            new Block(AbstractBlock.Properties.create(Material.ROCK, MaterialColor.LAPIS).setRequiresTool().hardnessAndResistance(5.0F, 6.0F))
+    );
+
+    public static final RegistryObject<Block> REDSTONE_COAL_BLOCK = BLOCKS.register("redstone_coal_block", () ->
+            new Block(AbstractBlock.Properties.create(Material.ROCK, MaterialColor.RED).setRequiresTool().hardnessAndResistance(5.0F, 6.0F))
     );
 
     public static final RegistryObject<Block> DIAMOND_TORCH = BLOCKS.register("diamond_torch", () ->
@@ -129,6 +154,29 @@ public class ExtraCoals
             new WallOrFloorItem(IRON_TORCH.get(), IRON_WALL_TORCH.get(), (new Item.Properties()).group(ItemGroup.DECORATIONS))
     );
 
+    public static final RegistryObject<Item> DIAMOND_COAL_BLOCK_BI = ITEMS.register("diamond_coal_block", () ->
+            new BlockItem(DIAMOND_COAL_BLOCK.get(), (new Item.Properties()).group(ItemGroup.BUILDING_BLOCKS))
+    );
+
+    public static final RegistryObject<Item> EMERALD_COAL_BLOCK_BI = ITEMS.register("emerald_coal_block", () ->
+            new BlockItem(EMERALD_COAL_BLOCK.get(), (new Item.Properties()).group(ItemGroup.BUILDING_BLOCKS))
+    );
+
+    public static final RegistryObject<Item> GOLD_COAL_BLOCK_BI = ITEMS.register("gold_coal_block", () ->
+            new BlockItem(GOLD_COAL_BLOCK.get(), (new Item.Properties()).group(ItemGroup.BUILDING_BLOCKS))
+    );
+
+    public static final RegistryObject<Item> IRON_COAL_BLOCK_BI = ITEMS.register("iron_coal_block", () ->
+            new BlockItem(IRON_COAL_BLOCK.get(), (new Item.Properties()).group(ItemGroup.BUILDING_BLOCKS))
+    );
+
+    public static final RegistryObject<Item> LAPIS_COAL_BLOCK_BI = ITEMS.register("lapis_coal_block", () ->
+            new BlockItem(LAPIS_COAL_BLOCK.get(), (new Item.Properties()).group(ItemGroup.BUILDING_BLOCKS))
+    );
+
+    public static final RegistryObject<Item> REDSTONE_COAL_BLOCK_BI = ITEMS.register("redstone_coal_block", () ->
+            new BlockItem(REDSTONE_COAL_BLOCK.get(), (new Item.Properties()).group(ItemGroup.BUILDING_BLOCKS))
+    );
 
     public ExtraCoals() {
         BLOCKS.register(FMLJavaModLoadingContext.get().getModEventBus());
@@ -172,6 +220,25 @@ public class ExtraCoals
             }
             if(ItemStack.areItemsEqual(event.getItemStack(), new ItemStack(REDSTONE_COAL.get()))) {
                 event.setBurnTime(200*32+4);
+            }
+
+            if(ItemStack.areItemsEqual(event.getItemStack(), new ItemStack(DIAMOND_COAL_BLOCK.get()))) {
+                event.setBurnTime(10*200*64+4);
+            }
+            if(ItemStack.areItemsEqual(event.getItemStack(), new ItemStack(EMERALD_COAL_BLOCK.get()))) {
+                event.setBurnTime(10*200*64+2);
+            }
+            if(ItemStack.areItemsEqual(event.getItemStack(), new ItemStack(GOLD_COAL_BLOCK.get()))) {
+                event.setBurnTime(10*200*16+8);
+            }
+            if(ItemStack.areItemsEqual(event.getItemStack(), new ItemStack(IRON_COAL_BLOCK.get()))) {
+                event.setBurnTime(10*200*32);
+            }
+            if(ItemStack.areItemsEqual(event.getItemStack(), new ItemStack(LAPIS_COAL_BLOCK.get()))) {
+                event.setBurnTime(10*200*32+2);
+            }
+            if(ItemStack.areItemsEqual(event.getItemStack(), new ItemStack(REDSTONE_COAL_BLOCK.get()))) {
+                event.setBurnTime(10*200*32+4);
             }
         }
     }
